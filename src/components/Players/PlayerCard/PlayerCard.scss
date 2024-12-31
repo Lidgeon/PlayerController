@@ -1,0 +1,57 @@
+$delete-color: rgb(255, 52, 52);
+
+.player {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  //border: 2px solid red;
+}
+
+.player-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.off {
+  opacity: 0.3;
+}
+
+.btns {
+  display: flex;
+  gap: 5px;
+}
+
+.counter {
+  display: flex;
+  gap: 5px;
+  position: relative;
+  margin-left: 10px;
+}
+
+.counter> *:first-child {
+  position: absolute;
+  top: 0px; 
+  right: 45px; 
+  padding: 0.8px 5px 0px 5px;
+  text-align: center;
+  border: 1px solid rgb(195, 0, 255);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btns > *:first-child {
+  margin-right: 20px;
+}
+
+.player-btn {
+  height: 18px;
+  width: 18px;
+  padding: 0.1rem;
+  display: inline-flex;
+}
+
+
+.delete-btn {
+  border: 1px solid $delete-color;
+  border-radius: 5px;
+}

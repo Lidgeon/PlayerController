@@ -1,0 +1,70 @@
+.players-block {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  max-width: 100%;
+  gap: 10px;
+
+  padding: 20px;
+
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: rgb(255, 252, 248);
+}
+
+.players-list {
+   display: flex;
+   max-width: 100%;
+   gap: 10px;
+   margin-bottom: 10px;
+   //border: 2px solid aqua;
+ }
+
+@mixin list-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.players-list__numbers {
+  @include list-flex;
+  //border: 2px solid red;
+}
+
+.players-list__players {
+  @include list-flex;
+  overflow-x: auto;
+  max-width: 100%;
+  //border: 2px solid blue;
+}
+
+.players-list__numbers > *,
+.players-list__players > * {
+  padding-bottom: 8px;
+}
+
+.players-list__numbers > *:not(:last-child),
+.players-list__players > *:not(:last-child) {
+  border-bottom: 1px dashed rgb(75, 75, 75);
+}
+
+.random-btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.3rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+
+.random-btn:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(223, 117, 255);
+}
+
+.random-btn:active {
+  color: rgb(254, 185, 255);
+}
