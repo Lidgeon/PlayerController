@@ -4,48 +4,13 @@ const initialState = {
   players: [
     {
       id: 1,
-      name: "player1ААААААААААААААААААААА",
-      status: "on",
-      count: 0,
-      lives: [true, true, true],
-    },
-    {
-      id: 2,
-      name: "player2ААААААА",
-      status: "on",
-      count: 0,
-      lives: [true, true, true],
-    },
-    {
-      id: 3,
-      name: "player3",
-      status: "on",
-      count: 0,
-      lives: [true, true, true],
-    },
-    {
-      id: 4,
-      name: "player3",
-      status: "on",
-      count: 0,
-      lives: [true, true, true],
-    },
-    {
-      id: 5,
-      name: "player3",
-      status: "on",
-      count: 0,
-      lives: [true, true, true],
-    },
-    {
-      id: 6,
-      name: "player3",
+      name: "1",
       status: "on",
       count: 0,
       lives: [true, true, true],
     },
   ],
-  nextId: 7,
+  nextId: 2,
 };
 
 const playerSlice = createSlice({
