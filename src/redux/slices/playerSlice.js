@@ -2,12 +2,48 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   players: [
-    { id: 1, name: "player1ААААААААААААААААААААА", status: "on", count: 0 },
-    { id: 2, name: "player2ААААААА", status: "on", count: 0 },
-    { id: 3, name: "player3", status: "on", count: 0 },
-    { id: 4, name: "player3", status: "on", count: 0 },
-    { id: 5, name: "player3", status: "on", count: 0 },
-    { id: 6, name: "player3", status: "on", count: 0 },
+    {
+      id: 1,
+      name: "player1ААААААААААААААААААААА",
+      status: "on",
+      count: 0,
+      lives: [true, true, true],
+    },
+    {
+      id: 2,
+      name: "player2ААААААА",
+      status: "on",
+      count: 0,
+      lives: [true, true, true],
+    },
+    {
+      id: 3,
+      name: "player3",
+      status: "on",
+      count: 0,
+      lives: [true, true, true],
+    },
+    {
+      id: 4,
+      name: "player3",
+      status: "on",
+      count: 0,
+      lives: [true, true, true],
+    },
+    {
+      id: 5,
+      name: "player3",
+      status: "on",
+      count: 0,
+      lives: [true, true, true],
+    },
+    {
+      id: 6,
+      name: "player3",
+      status: "on",
+      count: 0,
+      lives: [true, true, true],
+    },
   ],
   nextId: 7,
 };
@@ -48,6 +84,7 @@ const playerSlice = createSlice({
         name: action.payload.name,
         status: "on",
         count: 0,
+        lives: [true, true, true],
       };
       state.players.push(newPlayer);
       state.nextId++;
@@ -68,12 +105,26 @@ const playerSlice = createSlice({
         player.count--;
       }
     },
+    togglePlayerLife: (state, action) => {
+      const { playerId, lifeIndex } = action.payload;
+      const player = state.players.find((player) => player.id === playerId);
+      if (player) {
+        player.lives[lifeIndex] = !player.lives[lifeIndex];
+      }
+    },
   },
 });
 
 const { actions, reducer } = playerSlice;
 
-export const { removePlayer, togglePlayerStatus, shufflePlayers, addPlayer, incrementPlayerCount, decrementPlayerCount } =
-  actions;
+export const {
+  removePlayer,
+  togglePlayerStatus,
+  shufflePlayers,
+  addPlayer,
+  incrementPlayerCount,
+  decrementPlayerCount,
+  togglePlayerLife,
+} = actions;
 
 export default reducer;

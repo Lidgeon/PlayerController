@@ -1,0 +1,37 @@
+$primary-color: rgb(223, 117, 255);
+
+.players-block {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+  max-width: 100%;
+  gap: 10px;
+
+  padding: 20px;
+
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: rgb(255, 252, 248);
+}
+
+.player-title {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.3rem;
+  border-bottom: 2px dashed rgb(236, 174, 255);
+  transition: 0.2s ease;
+}
+
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.player {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}

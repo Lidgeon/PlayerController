@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { SyncOutlined, PlusCircleOutlined } from "@ant-design/icons";
 import { shufflePlayers } from "../../../redux/slices/playerSlice";
 import AddPlayerModal from "../AddPlayerModal/AddPlayerModal";
-import "./PlayersList.scss";
+import classes from  "./PlayersList.module.scss";
 
 import PlayerCard from "../PlayerCard/PlayerCard";
 
@@ -35,26 +35,26 @@ const PlayersList = () => {
   };
 
   return (
-    <div className="players-block">
-      <div className="players-list">
-        <div className="players-list__numbers">
+    <div className={classes["players-block"]}>
+      <div className={classes["players-list"]}>
+        <div className={classes["players-list__numbers"]}>
           {[...Array(players.length)].map((_, index) => (
             <div key={index} className="number">
               {index + 1}
             </div>
           ))}
         </div>
-        <div className="players-list__players">
+        <div className={classes["players-list__players"]}>
           {sortedPlayers.map((player) => (
             <PlayerCard key={player.id} player={player} />
           ))}
         </div>
       </div>
-      <button className="random-btn" onClick={handleOpenModal}>
+      <button className={classes["random-btn"]} onClick={handleOpenModal}>
         Add
         <PlusCircleOutlined />
       </button>
-      <button className="random-btn" onClick={handleShuffle}>
+      <button className={classes["random-btn"]} onClick={handleShuffle}>
         Random
         <SyncOutlined />
       </button>

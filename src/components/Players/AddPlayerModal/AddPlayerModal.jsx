@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Modal } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
-import "./AddPlayerModal.css";
 
 const AddPlayerModal = ({ isOpen, onClose }) => {
   const [playerName, setPlayerName] = useState("");
@@ -42,7 +41,7 @@ const AddPlayerModal = ({ isOpen, onClose }) => {
       
       <input
         type="text"
-        placeholder="Сюда"
+        placeholder="Писать сюда"
         value={playerName}
         onKeyDown={handleEnter}
         onChange={(e) => setPlayerName(e.target.value)}

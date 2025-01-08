@@ -1,0 +1,59 @@
+$delete-color: rgb(255, 52, 52);
+$live-color: rgb(223, 117, 255);
+
+.player {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.player-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btns {
+  display: flex;
+  gap: 15px;
+}
+
+.player-btn {
+  height: 18px;
+  width: 18px;
+  padding: 0.1rem;
+  display: inline-flex;
+}
+
+.lives {
+  display: inline-flex;
+  margin-right: 20px;
+  .life-btn {
+    color: $live-color;
+  }
+}
+
+.counter {
+  display: flex;
+  position: relative;
+
+  .count {
+    position: absolute;
+    top: 0px;
+    right: 40px;
+    padding: 0.8px 5px 0px 5px;
+    text-align: center;
+  }
+}
+
+.control {
+  display: flex;
+  gap: 2px;
+
+  .delete-btn {
+    border: 1px solid $delete-color;
+    border-radius: 5px;
+  }
+}
+.off {
+  opacity: 0.3;
+}
